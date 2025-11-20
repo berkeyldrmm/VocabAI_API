@@ -1,0 +1,6 @@
+@VocabAI_API.Presentation_HostAddress = http://localhost:5058
+
+GET {{VocabAI_API.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
