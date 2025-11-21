@@ -14,6 +14,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VocabAI_API.Domain", "src\Core\VocabAI_API.Domain\VocabAI_API.Domain.csproj", "{8B76FA7C-C48C-4A46-A5FF-D957547C192B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VocabAI_API.Application", "src\Core\VocabAI_API.Application\VocabAI_API.Application.csproj", "{42229F02-5154-4DFE-9A8D-294901C303C5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B76FA7C-C48C-4A46-A5FF-D957547C192B} = {8B76FA7C-C48C-4A46-A5FF-D957547C192B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VocabAI_API.Persistence", "src\Infrastructure\VocabAI_API.Persistence\VocabAI_API.Persistence.csproj", "{CDBE2C0E-40E8-468B-B71E-287B0CDBD487}"
 	ProjectSection(ProjectDependencies) = postProject

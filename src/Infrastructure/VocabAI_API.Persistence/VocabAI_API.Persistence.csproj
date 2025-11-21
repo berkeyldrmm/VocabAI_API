@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\VocabAI_API.Application\VocabAI_API.Application.csproj" />
     <ProjectReference Include="..\..\Core\VocabAI_API.Domain\VocabAI_API.Domain.csproj" />
   </ItemGroup>
 
