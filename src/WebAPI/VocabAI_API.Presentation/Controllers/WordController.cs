@@ -36,7 +36,7 @@ namespace VocabAI_API.Presentation.Controllers
                     await _wordService.Add(new Word()
                     {
                         Id = Guid.NewGuid(),
-                        Name = request.Word,
+                        Name = dto.CorrectedWord,
                         LevelId = dto.WordLevel.ToUpper() switch
                         {
                             "A1" => 1,
@@ -50,6 +50,20 @@ namespace VocabAI_API.Presentation.Controllers
                     });
                 }
                 return Ok(dto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("/getwordsbylevel/{levelId}")]
+        public async Task<IActionResult> GetWordsByLevel(int levelId)
+        {
+            try
+            {
+                var words = await _wordService.GetByLevel(levelId);
+                return Ok(words);
             }
             catch (Exception ex)
             {
